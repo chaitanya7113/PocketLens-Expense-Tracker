@@ -1,8 +1,8 @@
-# Intelligent Expense Tracker — Architecture
+# PocketLens Expense Tracker — Architecture
 
 ## System Overview
 
-The **Intelligent Expense Tracker** is a full-stack application that lets users track expenses, upload bank statements (CSV), and view analytics. The backend is Django REST with JWT auth and PostgreSQL; the frontend is React (Vite) with charts and JWT in localStorage.
+The **PocketLens Expense Tracker** is a full-stack application that lets users track expenses, upload bank statements (CSV), and view analytics. The backend is Django REST with JWT auth and PostgreSQL; the frontend is React (Vite) with charts and JWT in localStorage.
 
 ---
 
@@ -10,21 +10,21 @@ The **Intelligent Expense Tracker** is a full-stack application that lets users 
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                         FRONTEND (React + Vite)                          │
+│                         FRONTEND (React + Vite)                         │
 │  Login │ Register │ Dashboard │ Add Expense │ Expense List │ Analytics  │
-│  Axios + JWT (localStorage) │ Chart.js/Recharts                           │
+│  Axios + JWT (localStorage) │ Chart.js/Recharts                         │
 └─────────────────────────────────────────────────────────────────────────┘
                                     │
                                     │ HTTPS / REST API
                                     ▼
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                    BACKEND (Django + DRF)                                │
-│  JWT Auth │ Expenses API │ Analytics │ Statement Upload │ Categorization │
+│                    BACKEND (Django + DRF)                               │
+│  JWT Auth │ Expenses API │ Analytics │ Statement Upload │ Categorization│
 └─────────────────────────────────────────────────────────────────────────┘
                                     │
                                     ▼
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                         PostgreSQL                                       │
+│                         PostgreSQL                                      │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
 
