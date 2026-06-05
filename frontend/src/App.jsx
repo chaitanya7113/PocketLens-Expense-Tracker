@@ -7,12 +7,15 @@ import Dashboard from './pages/Dashboard'
 import AddExpense from './pages/AddExpense'
 import ExpenseList from './pages/ExpenseList'
 import Analytics from './pages/Analytics'
+import AIAgent from './pages/AIAgent'
 import AddIncome from './pages/AddIncome'
 
 function PrivateRoute({ children }) {
   const { isAuthenticated, loading } = useAuth()
+
   if (loading) return <div className="container">Loading...</div>
   if (!isAuthenticated) return <Navigate to="/login" replace />
+
   return children
 }
 
@@ -21,6 +24,7 @@ export default function App() {
     <Routes>
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
+
       <Route
         path="/"
         element={
@@ -33,8 +37,10 @@ export default function App() {
         <Route path="expenses" element={<ExpenseList />} />
         <Route path="expenses/add" element={<AddExpense />} />
         <Route path="analytics" element={<Analytics />} />
-        <Route path="/income/add" element={<AddIncome />} />
+        <Route path="ai-agent" element={<AIAgent />} />
+        <Route path="income/add" element={<AddIncome />} />
       </Route>
+
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   )

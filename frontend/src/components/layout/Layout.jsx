@@ -20,6 +20,7 @@ export default function Layout() {
           <NavLink to="/expenses/add" className={({ isActive }) => isActive ? 'active' : ''}>Add Expense</NavLink>
           <NavLink to="/income/add" className={({ isActive }) => isActive ? 'active' : ''}>Add Income</NavLink>
           <NavLink to="/analytics" className={({ isActive }) => isActive ? 'active' : ''}>Analytics</NavLink>
+          <NavLink to="/ai-agent" className={({ isActive }) => isActive ? 'active' : ''}>AI Agent</NavLink>
           <span style={{ color: 'var(--text-muted)', fontSize: '0.9rem' }}>{user?.username}</span>
           <button type="button" className="btn btn-ghost" onClick={handleLogout}>Logout</button>
         </div>
